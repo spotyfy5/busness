@@ -3,170 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PureOn প্রিমিয়াম কালেকশন</title>
+    <title>PUREON | প্রিমিয়াম পাঞ্জাবী</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        .theme-pink { background-color: #d81b60; }
-        .text-theme { color: #d81b60; }
-        .btn-red { background-color: #b91c1c; }
-        
-        /* ফ্লোটিং বাটন সিস্টেম */
-        .social-float {
-            position: fixed;
-            right: 20px;
-            bottom: 30px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 15px;
-            align-items: center;
-        }
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: none; /* শুরুতে লুকানো থাকবে */
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .main-fab {
-            width: 60px;
-            height: 60px;
-            background-color: #d81b60;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+        .floral-border { border-left: 10px solid #2d5a27; border-right: 10px solid #2d5a27; }
+        .deep-navy { background-color: #1a237e; }
+        .gold-text { color: #fbc02d; }
+        .trust-box { background-color: #fffbeb; border: 2px solid #fbc02d; }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 font-sans">
 
-    <div class="social-float">
-        <div class="main-fab" onclick="toggleSocial()">
-            <i class="fas fa-headset"></i>
+    <div class="deep-navy p-10 text-center">
+        <h1 class="text-5xl font-bold gold-text tracking-widest">PUREON</h1>
+        <p class="text-white mt-2">— কোয়ালিটি আমাদের পরিচয় —</p>
+    </div>
+
+    <div class="p-4 floral-border">
+        <h2 class="text-center text-2xl font-bold text-blue-900 mb-4">আমাদের কালেকশন ভিডিও</h2>
+        <div class="max-w-md mx-auto bg-black rounded-xl overflow-hidden shadow-lg">
+            <video width="100%" controls class="w-full">
+                <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
+            </video>
         </div>
-        <a href="https://wa.me/8801409084819" target="_blank" id="wa-btn" class="social-btn" style="background-color: #25D366;"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" id="tg-btn" class="social-btn" style="background-color: #0088cc;"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://www.tiktok.com/@sojib_music" target="_blank" id="tt-btn" class="social-btn" style="background-color: #000000;"><i class="fab fa-tiktok"></i></a>
     </div>
 
-    <div class="theme-pink p-8 text-center text-white">
-        <h1 class="text-4xl font-bold tracking-wider">PUREON</h1>
-        <p class="text-sm mt-1">— কোয়ালিটি আমাদের পরিচয় —</p>
-        <p class="text-lg mt-6 font-semibold">আরামদায়ক প্রিমিয়াম পাঞ্জাবী।</p>
-    </div>
-
-    <div class="p-4 space-y-6">
+    <div class="p-4 space-y-6 floral-border">
         <script>
             for(let i=1; i<=4; i++) {
                 document.write(`
-                <div class="bg-white p-4 shadow-sm border border-gray-200">
-                    <div class="w-full h-64 bg-gray-200 flex items-center justify-center mb-4 text-gray-400">ছবি</div>
-                    <h3 class="text-center text-theme text-2xl font-bold">প্রিমিয়াম পাঞ্জাবী ০${i}</h3>
-                    <p class="text-center text-red-600 font-bold mt-2">অফার মূল্য ১৬৫০ টাকা</p>
-                    
-                    <div class="mt-4">
-                        <label class="font-bold text-sm">সাইজ ও রঙ নির্বাচন করুন:</label>
-                        <select class="w-full border p-2 mt-1 rounded bg-gray-50">
-                            <option>S - অফ-হোয়াইট</option>
-                            <option>M - নেভি ব্লু</option>
-                            <option>L - মেরুন</option>
-                            <option>XL - ব্ল্যাক</option>
-                        </select>
+                <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-md">
+                    <div class="w-full h-64 bg-gray-200 flex items-center justify-center mb-4 rounded-lg">ছবি</div>
+                    <h3 class="text-center text-blue-900 text-2xl font-bold">প্রিমিয়াম পাঞ্জাবী ০${i}</h3>
+                    <p class="text-center font-bold mt-2">অফার মূল্য: ১৬৫০ টাকা</p>
+                    <div class="mt-4 space-y-3">
+                        <div>
+                            <label class="font-bold text-sm">সাইজ নির্বাচন করুন:</label>
+                            <select name="size_${i}" class="w-full border p-2 rounded mt-1">
+                                <option>S (৩৬)</option><option>M (৩৮)</option><option>L (৪০)</option><option>XL (৪২)</option><option>XXL (৪৪)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-bold text-sm">রঙ নির্বাচন করুন:</label>
+                            <select name="color_${i}" class="w-full border p-2 rounded mt-1">
+                                <option>নেভি ব্লু</option><option>সাদা</option><option>কালো</option><option>মেরুন</option><option>অফ-হোয়াইট</option>
+                            </select>
+                        </div>
                     </div>
-
                     <button onclick="document.getElementById('billing-section').scrollIntoView({behavior:'smooth'})" 
-                            class="w-full mt-4 btn-red text-white py-3 font-bold rounded">অর্ডার করতে চাই</button>
+                            class="w-full mt-4 deep-navy text-white py-3 font-bold rounded-lg">অর্ডার করতে চাই</button>
                 </div>`);
             }
         </script>
     </div>
 
-    <div id="billing-section" class="p-6 bg-gray-100">
-        <div class="max-w-md mx-auto bg-white p-6 shadow-md rounded">
-            <h3 class="text-xl font-bold mb-4 text-theme">বিলিং ও পেমেন্ট</h3>
+    <form action="https://formspree.io/f/mykvvjeo" method="POST" id="billing-section" class="p-6 floral-border">
+        <div class="max-w-md mx-auto bg-white p-6 shadow-2xl rounded-xl border-t-8 border-blue-900">
             
-            <div class="space-y-4">
-                <input type="text" placeholder="আপনার নাম *" class="w-full border p-3 rounded">
-                <input type="text" placeholder="আপনার ঠিকানা *" class="w-full border p-3 rounded">
-                <input type="text" placeholder="মোবাইল নম্বর *" class="w-full border p-3 rounded">
+            <div class="trust-box p-4 mb-6 rounded-lg text-sm space-y-3">
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i><strong>১০০% প্রিজারভেটিভ মুক্ত শতভাগ খাঁটি খেজুরের পাটালি গুড়।</strong></p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>গুড় চিনি, কেমিক্যাল মুক্ত, পরিবারকে নিয়ে নিশ্চিন্তে খেতে পারবেন।</p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>আমাদের গুড় প্রান্তিক চাষী দ্বারা নিজস্ব তদারকিতে তৈরি, আমরা নিজেরা তৈরি করি।</p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>১০০% কেমিক্যাল মুক্ত, ডেলিভারি ম্যানের সামনে টেস্ট করে মূল্য পরিশোধ করা যাবে।</p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>অর্ডার করতে কোনো অগ্রিম পেমেন্ট করতে হবে না।</p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>সারা বাংলাদেশে ক্যাশ অন হোম ডেলিভারি।</p>
+                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>গুড় হাতে পাওয়ার পর খেয়ে যাচাই করে মূল্য পরিশোধ করতে পারবেন।</p>
             </div>
 
-            <div class="mt-8 border-t pt-4">
-                <h4 class="font-bold mb-3 text-red-600">১০০ টাকা অগ্রিম (Advance) পেমেন্ট করার নিয়ম:</h4>
+            <h3 class="text-xl font-bold mb-4 text-center">অর্ডার কনফার্ম করুন</h3>
+            <input type="text" name="name" placeholder="আপনার নাম *" class="w-full border p-3 rounded mb-3" required>
+            <input type="text" name="address" placeholder="আপনার ঠিকানা *" class="w-full border p-3 rounded mb-3" required>
+            <input type="text" name="phone" placeholder="মোবাইল নম্বর *" class="w-full border p-3 rounded mb-3" required>
+
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg text-sm border border-blue-200">
+                <h4 class="font-bold text-blue-900 mb-2">পেমেন্ট করার নিয়ম:</h4>
+                <p class="mb-3">পেমেন্ট করার জন্য এই নম্বরে ১০০ টাকা সেন্ড মানি করুন:</p>
                 
-                <div class="space-y-3">
-                    <div class="border p-3 rounded">
-                        <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="payment" onclick="showBox('bkash')" class="w-5 h-5" checked>
-                            <span class="ml-3 font-bold">বিকাশ</span>
-                        </label>
-                        <div id="bkash-box" class="mt-2 text-sm bg-gray-50 p-3 rounded">
-                            <p>১. বিকাশ অ্যাপ ওপেন করুন।</p>
-                            <p>২. "Send Money" অপশনে ক্লিক করুন।</p>
-                            <p>৩. আমাদের নম্বর: <b>01404277094</b> লিখুন।</p>
-                            <p>৪. ট্রানজেকশন আইডি নিচে বসান:</p>
-                            <input type="text" placeholder="ট্রানজেকশন আইডি" class="w-full border p-2 mt-1 rounded">
-                        </div>
-                    </div>
-                    
-                    <div class="border p-3 rounded">
-                        <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="payment" onclick="showBox('rocket')" class="w-5 h-5">
-                            <span class="ml-3 font-bold">রকেট</span>
-                        </label>
-                        <div id="rocket-box" class="hidden mt-2 text-sm bg-gray-50 p-3 rounded">
-                            <p>১. রকেট অ্যাপ ওপেন করুন।</p>
-                            <p>২. "Send Money" অপশনে যান।</p>
-                            <p>৩. আমাদের নম্বর: <b>01404277094</b> দিন।</p>
-                            <input type="text" placeholder="ট্রানজেকশন আইডি" class="w-full border p-2 mt-1 rounded">
-                        </div>
-                    </div>
-
-                    <div class="border p-3 rounded">
-                        <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="payment" onclick="showBox('nagad')" class="w-5 h-5">
-                            <span class="ml-3 font-bold">নগদ</span>
-                        </label>
-                        <div id="nagad-box" class="hidden mt-2 text-sm bg-gray-50 p-3 rounded">
-                            <p>১. নগদ অ্যাপে লগইন করুন।</p>
-                            <p>২. "Send Money" অপশন সিলেক্ট করুন।</p>
-                            <p>৩. আমাদের নম্বর: <b>01404277094</b> লিখুন।</p>
-                            <input type="text" placeholder="ট্রানজেকশন আইডি" class="w-full border p-2 mt-1 rounded">
-                        </div>
-                    </div>
+                <div class="bg-white p-3 rounded-lg border border-blue-300 flex justify-between items-center mb-4">
+                    <span class="font-bold text-blue-900 text-lg">01404277094</span>
+                    <button type="button" onclick="copyNumber('01404277094')" class="bg-blue-800 text-white px-4 py-1 rounded text-sm font-bold">Copy</button>
                 </div>
-            </div>
 
-            <button class="w-full mt-6 theme-pink text-white py-4 font-bold rounded text-lg shadow-lg">
-                🔒 অর্ডার কনফার্ম করুন
-            </button>
+                <ul class="list-decimal list-inside space-y-1 text-gray-700">
+                    <li>আপনার পছন্দের অ্যাপটি (বিকাশ/নগদ/রকেট) ওপেন করুন।</li>
+                    <li>'Send Money' অপশনে ক্লিক করুন।</li>
+                    <li>আমাদের নম্বরটি কপি করে বসান।</li>
+                    <li>১০০ টাকা অগ্রিম সেন্ড করুন।</li>
+                    <li>পেমেন্ট সম্পন্ন করুন এবং ট্রানজেকশন আইডি (TrxID) টি কপি করুন।</li>
+                    <li>আপনার ট্রানজেকশন আইডিটি নিচের বক্সে লিখুন।</li>
+                </ul>
+            </div>
+            
+            <div class="mt-3">
+                <input type="text" name="trx_id" placeholder="ট্রানজেকশন আইডি" class="w-full border p-3 rounded">
+            </div>
+            
+            <button type="submit" class="w-full mt-6 deep-navy text-white py-4 font-bold rounded-lg text-lg">অর্ডার কনফার্ম করুন</button>
         </div>
+    </form>
+
+    <div class="p-6 text-center bg-pink-600 text-white">
+        <p class="font-bold">Copyright © 2025 - Boost Your Online Presence with Expert Web Design & Development by:</p>
+        <h2 class="text-2xl font-black mt-1">SOJIB</h2>
     </div>
 
     <script>
-        function toggleSocial() {
-            const btns = [document.getElementById('wa-btn'), document.getElementById('tg-btn'), document.getElementById('tt-btn')];
-            btns.forEach(btn => {
-                btn.style.display = (btn.style.display === 'flex') ? 'none' : 'flex';
+        function copyNumber(number) {
+            navigator.clipboard.writeText(number).then(() => {
+                alert("নম্বরটি কপি হয়েছে: " + number);
             });
-        }
-        function showBox(id) {
-            document.getElementById('bkash-box').classList.add('hidden');
-            document.getElementById('rocket-box').classList.add('hidden');
-            document.getElementById('nagad-box').classList.add('hidden');
-            document.getElementById(id + '-box').classList.remove('hidden');
         }
     </script>
 </body>
