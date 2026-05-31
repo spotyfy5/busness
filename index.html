@@ -3,117 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUREON | প্রিমিয়াম পাঞ্জাবী</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>টুর্নামেন্ট হাব | গেমিং জোন</title>
+    <!-- লিপিঘর থেকে Hind Siliguri ফন্ট -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        .floral-border { border-left: 10px solid #2d5a27; border-right: 10px solid #2d5a27; }
-        .deep-navy { background-color: #1a237e; }
-        .gold-text { color: #fbc02d; }
-        .trust-box { background-color: #fffbeb; border: 2px solid #fbc02d; }
+        body { font-family: 'Hind Siliguri', sans-serif; background: #050505; color: #fff; margin: 0; padding: 0; }
+        
+        .hero { 
+            height: 70vh; 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+            url('https://i.supaimg.com/f7d2fa80-8141-47d0-9af1-824505174b7f/e3593dd7-7887-4118-85aa-d8e97ad119cd.jpg') center/cover; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; 
+            border-bottom: 2px solid #8e44ad; padding: 40px 20px;
+        }
+        
+        .hero h1 { font-size: 4.5rem; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; font-family: sans-serif; }
+        .hero p { font-size: 1.8rem; margin: 10px 0; font-weight: 600; }
+        .highlight { font-size: 2.2rem; color: #ffcc00; font-weight: 700; margin: 20px 0; }
+        
+        .btn { padding: 22px 55px; background: #8e44ad; color: #fff; text-decoration: none; font-weight: 700; border-radius: 10px; margin-top: 30px; transition: 0.3s; display: inline-block; font-size: 1.5rem; }
+        .btn:hover { background: #732d91; transform: translateY(-5px); }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 30px; max-width: 700px; margin: auto; }
+        .card { background: #1a1a1a; padding: 30px; border-radius: 10px; text-align: center; border: 1px solid #333; }
+        .card h3 { margin: 0; font-size: 2rem; font-family: sans-serif; } 
+        .card p { color: #aaa; font-size: 1.1rem; margin-top: 10px; font-weight: 600; }
+
+        .container { padding: 40px 20px; max-width: 900px; margin: auto; }
+        .info-card { background: #1a1a1a; padding: 40px; border-left: 8px solid #8e44ad; border-radius: 10px; }
+        .info-card h2 { font-size: 2.5rem; margin-top: 0; margin-bottom: 25px; color: #8e44ad; }
+        .info-card p { font-size: 1.4rem; line-height: 2; color: #eee; }
+        
+        footer { text-align: center; padding: 40px; color: #777; font-size: 1rem; }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-    <div class="deep-navy p-10 text-center">
-        <h1 class="text-5xl font-bold gold-text tracking-widest">PUREON</h1>
-        <p class="text-white mt-2">— কোয়ালিটি আমাদের পরিচয় —</p>
+<div class="hero">
+    <h1>ʙᴀᴛᴛʟᴇ ᴢᴏɴᴇ ᴛᴏᴜʀ</h1>
+    <p>আপনি কি একজন ইস্পোর্টস প্লেয়ার?</p>
+    <p class="highlight">বসে না থেকে প্রতিদিন ১০০০/২০০০ টাকা ইনকাম করুন!</p>
+    <p>নিজেকে প্রমাণ করার সময় চলে এসেছে!</p>
+    
+    <!-- ডাউনলোড লিংক সঠিকভাবে অ্যাড করা হয়েছে -->
+    <a href="https://www.mediafire.com/file/gof0519z9xyytsu/ʙᴀᴛᴛʟᴇ+ᴢᴏɴᴇ+ᴛᴏᴜʀ.apk/file" class="btn" onclick="incrementDownload()" target="_blank">অ্যাপ ডাউনলোড করুন</a>
+</div>
+
+<div class="stats-grid">
+    <div class="card"><h3 id="dl-count">1379+</h3><p>Downloads</p></div>
+    <div class="card"><h3>356+</h3><p>Regular Players</p></div>
+    <div class="card"><h3>24/7</h3><p>Support</p></div>
+    <div class="card"><h3>9+</h3><p>Games & Modes</p></div>
+</div>
+
+<div class="container">
+    <div class="info-card">
+        <h2>টুর্নামেন্টের নিয়মাবলী</h2>
+        <p>
+            ১. সকল ম্যাচ ফেয়ার প্লে হতে হবে।<br>
+            ২. কোনো প্রকার হ্যাক বা থার্ড পার্টি অ্যাপ ব্যবহার সম্পূর্ণ নিষিদ্ধ।<br>
+            ৩. সঠিক সময়ে লবিতে উপস্থিত থাকতে হবে (৫ মিনিট দেরি করলে ডিসকোয়ালিফাই)।<br>
+            ৪. গালিগালাজ বা অভদ্র আচরণ করলে সাথে সাথে ব্যান করা হবে।<br>
+            ৫. ম্যাচ চলাকালীন যেকোনো ঝামেলার জন্য অ্যাডমিনের সিদ্ধান্তই চূড়ান্ত।<br>
+            ৬. ইন্টারনেট সমস্যার জন্য সম্পূর্ণ দায়ভার প্লেয়ারকে নিতে হবে।<br>
+            ৭. একজনের আইডি দিয়ে একাধিক প্লেয়ার খেলতে পারবে না।<br>
+            ৮. লবি কোড বা পাসওয়ার্ড কাউকে শেয়ার করা যাবে না।<br>
+            ৯. টুর্নামেন্ট ফি জমা দেওয়ার পর কোনো রিফান্ড দেওয়া হবে না।<br>
+            ১০. প্রতিটি ম্যাচের স্ক্রিনশট বা ভিডিও রেকর্ড নিজের কাছে রাখতে হবে।<br>
+            ১১. অ্যাডমিনের নির্দেশ অমান্য করলে কঠোর ব্যবস্থা নেওয়া হবে।<br>
+            ১২. সকল আপডেটের জন্য নিয়মিত আমাদের ফেসবুক গ্রুপ চেক করুন।
+        </p>
     </div>
+</div>
 
-    <div class="p-4 floral-border">
-        <h2 class="text-center text-2xl font-bold text-blue-900 mb-4">আমাদের কালেকশন ভিডিও</h2>
-        <div class="max-w-md mx-auto bg-black rounded-xl overflow-hidden shadow-lg">
-            <video width="100%" controls class="w-full">
-                <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
+<footer>
+    &copy; ২০২৬ সব স্বত্ব সংরক্ষিত - সোজিবের গেমিং জোন
+</footer>
 
-    <div class="p-4 space-y-6 floral-border">
-        <script>
-            for(let i=1; i<=4; i++) {
-                document.write(`
-                <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-md">
-                    <div class="w-full h-64 bg-gray-200 flex items-center justify-center mb-4 rounded-lg">ছবি</div>
-                    <h3 class="text-center text-blue-900 text-2xl font-bold">প্রিমিয়াম পাঞ্জাবী ০${i}</h3>
-                    <p class="text-center font-bold mt-2">অফার মূল্য: 2350 টাকা</p>
-                    <div class="mt-4 space-y-3">
-                        <div>
-                            <label class="font-bold text-sm">সাইজ নির্বাচন করুন:</label>
-                            <select name="size_${i}" class="w-full border p-2 rounded mt-1">
-                                <option>S (৩৬)</option><option>M (৩৮)</option><option>L (৪০)</option><option>XL (৪২)</option><option>XXL (৪৪)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="font-bold text-sm">রঙ নির্বাচন করুন:</label>
-                            <select name="color_${i}" class="w-full border p-2 rounded mt-1">
-                                <option>নেভি ব্লু</option><option>সাদা</option><option>কালো</option><option>মেরুন</option><option>অফ-হোয়াইট</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button onclick="document.getElementById('billing-section').scrollIntoView({behavior:'smooth'})" 
-                            class="w-full mt-4 deep-navy text-white py-3 font-bold rounded-lg">অর্ডার করতে চাই</button>
-                </div>`);
-            }
-        </script>
-    </div>
+<script>
+    let downloads = 1379;
+    function incrementDownload() {
+        downloads++;
+        document.getElementById('dl-count').innerText = downloads + '+';
+    }
+</script>
 
-    <form action="https://formspree.io/f/mykvvjeo" method="POST" id="billing-section" class="p-6 floral-border">
-        <div class="max-w-md mx-auto bg-white p-6 shadow-2xl rounded-xl border-t-8 border-blue-900">
-            
-            <div class="trust-box p-4 mb-6 rounded-lg text-sm space-y-3">
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i><strong>১০০% প্রিজারভেটিভ মুক্ত শতভাগ খাঁটি খেজুরের পাটালি গুড়।</strong></p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>গুড় চিনি, কেমিক্যাল মুক্ত, পরিবারকে নিয়ে নিশ্চিন্তে খেতে পারবেন।</p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>আমাদের গুড় প্রান্তিক চাষী দ্বারা নিজস্ব তদারকিতে তৈরি, আমরা নিজেরা তৈরি করি।</p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>১০০% কেমিক্যাল মুক্ত, ডেলিভারি ম্যানের সামনে টেস্ট করে মূল্য পরিশোধ করা যাবে।</p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>অর্ডার করতে কোনো অগ্রিম পেমেন্ট করতে হবে না।</p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>সারা বাংলাদেশে ক্যাশ অন হোম ডেলিভারি।</p>
-                <p><i class="fas fa-check-circle text-green-700 mr-2"></i>গুড় হাতে পাওয়ার পর খেয়ে যাচাই করে মূল্য পরিশোধ করতে পারবেন।</p>
-            </div>
-
-            <h3 class="text-xl font-bold mb-4 text-center">অর্ডার কনফার্ম করুন</h3>
-            <input type="text" name="name" placeholder="আপনার নাম *" class="w-full border p-3 rounded mb-3" required>
-            <input type="text" name="address" placeholder="আপনার ঠিকানা *" class="w-full border p-3 rounded mb-3" required>
-            <input type="text" name="phone" placeholder="মোবাইল নম্বর *" class="w-full border p-3 rounded mb-3" required>
-
-            <div class="mt-6 p-4 bg-blue-50 rounded-lg text-sm border border-blue-200">
-                <h4 class="font-bold text-blue-900 mb-2">পেমেন্ট করার নিয়ম:</h4>
-                <p class="mb-3">পেমেন্ট করার জন্য এই নম্বরে ১০০ টাকা সেন্ড মানি করুন:</p>
-                
-                <div class="bg-white p-3 rounded-lg border border-blue-300 flex justify-between items-center mb-4">
-                    <span class="font-bold text-blue-900 text-lg">01404277094</span>
-                    <button type="button" onclick="copyNumber('01404277094')" class="bg-blue-800 text-white px-4 py-1 rounded text-sm font-bold">Copy</button>
-                </div>
-
-                <ul class="list-decimal list-inside space-y-1 text-gray-700">
-                    <li>আপনার পছন্দের অ্যাপটি (বিকাশ/নগদ/রকেট) ওপেন করুন।</li>
-                    <li>'Send Money' অপশনে ক্লিক করুন।</li>
-                    <li>আমাদের নম্বরটি কপি করে বসান।</li>
-                    <li>১০০ টাকা অগ্রিম সেন্ড করুন।</li>
-                    <li>পেমেন্ট সম্পন্ন করুন এবং ট্রানজেকশন আইডি (TrxID) টি কপি করুন।</li>
-                    <li>আপনার ট্রানজেকশন আইডিটি নিচের বক্সে লিখুন।</li>
-                </ul>
-            </div>
-            
-            <div class="mt-3">
-                <input type="text" name="trx_id" placeholder="ট্রানজেকশন আইডি" class="w-full border p-3 rounded">
-            </div>
-            
-            <button type="submit" class="w-full mt-6 deep-navy text-white py-4 font-bold rounded-lg text-lg">অর্ডার কনফার্ম করুন</button>
-        </div>
-    </form>
-
-    <div class="p-6 text-center bg-pink-600 text-white">
-        <p class="font-bold">Copyright © 2025 - Boost Your Online Presence with Expert Web Design & Development by:</p>
-        <h2 class="text-2xl font-black mt-1">SOJIB</h2>
-    </div>
-
-    <script>
-        function copyNumber(number) {
-            navigator.clipboard.writeText(number).then(() => {
-                alert("নম্বরটি কপি হয়েছে: " + number);
-            });
-        }
-    </script>
 </body>
 </html>
